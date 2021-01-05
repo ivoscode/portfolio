@@ -1,3 +1,49 @@
+@font-face {
+  font-family: 'Poppins-bold';
+  src: url('../../static/fonts/Poppins-Bold.woff') format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../static/fonts/Poppins-Regular.woff') format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Recoleta';
+  src: url('../../static/fonts/Recoleta-Regular.woff') format('woff');
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+p {
+  font-family: Poppins, sans-serif;
+  color: rgba(62, 72, 86, 0.76);
+}
+h1 {
+  font-family: Recoleta, sans-serif;
+}
+.invert {
+  filter: invert(1);
+}
+.header-bg {
+  background-color: hsla(0, 0, 100, 0.74);
+  backdrop-filter: blur(16px);
+  @apply sticky top-0;
+}
+
+.hero-h2 {
+  font-family: Poppins-bold, sans-serif;
+  letter-spacing: 0.125rem;
+  font-size: 0.625rem;
+  color: rgba(62, 72, 86, 0.76);
+}
+
+.mark {
+  background: linear-gradient(180deg, #feac0e, #da3654 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,9 +1,9 @@
-import { useStaticQuery, graphql } from "gatsby";
-import PropTypes from "prop-types";
-import React from "react";
-import { Helmet } from "react-helmet";
+import { useStaticQuery, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Helmet } from 'react-helmet';
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang = 'en', meta, keywords, title }) {
   const { site } = useStaticQuery(graphql`
     query DefaultSEOQuery {
       site {
@@ -45,11 +45,11 @@ function SEO({ description, lang, meta, keywords, title }) {
           content: `summary`,
         },
         {
-          name: `twitter:creator`,
+          name: `developer`,
           content: site.siteMetadata.author,
         },
         {
-          name: `twitter:title`,
+          name: `title`,
           content: title,
         },
         {
