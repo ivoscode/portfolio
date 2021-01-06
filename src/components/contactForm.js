@@ -53,7 +53,7 @@ export default class ContactForm extends React.Component {
             </label>
           </div>
 
-          <div className='mt-10'>
+          <div className='mt-8'>
             <input
               className='rounded w-full'
               type={'text'}
@@ -65,7 +65,7 @@ export default class ContactForm extends React.Component {
             />
           </div>
 
-          <div className='mt-8'>
+          <div className='mt-6'>
             <input
               className='rounded w-full'
               placeholder='Email'
@@ -77,7 +77,7 @@ export default class ContactForm extends React.Component {
             />
           </div>
 
-          <div className='mt-8'>
+          <div className='mt-6'>
             <textarea
               className=' rounded w-full'
               name={'message'}
@@ -87,7 +87,7 @@ export default class ContactForm extends React.Component {
               required={true}
             />
           </div>
-          <div className='mt-5 mb-10'>
+          <div className='mt-5 mb-8'>
             <button
               className='bg-pink-700 hover:bg-pink-800 text-white font-bold py-2 px-7 rounded-full'
               type='submit'
