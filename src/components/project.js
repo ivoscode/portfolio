@@ -45,12 +45,12 @@ const Project = () => {
       <h1 className=' mb-8 text-3xl font-bold text-gray-700 md:text-5xl '>
         Latest work
       </h1>
-      <div className='flex md:justify-between'>
+      <div className='md:flex md:justify-between'>
         {projectData.map(({ title, image, text }) => {
           return (
             <div
               key={title}
-              className='w-1/3 mx-5  p-10 shadow-lg rounded-lg bg-gray-100  '
+              className='lg:w-1/3 md:w-1/2 mx-5  p-10 shadow-lg rounded-lg bg-gray-100  '
             >
               <div className='overflow-hidden  rounded-lg'>{image}</div>{' '}
               <h1 className='mt-5 mb-3 text-xl'>{title} </h1>

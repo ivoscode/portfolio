@@ -58,7 +58,7 @@ function Header() {
               title: `About`,
             },
             {
-              route: `/`,
+              route: `/#contact`,
               title: `Contact`,
             },
           ].map((link) => (

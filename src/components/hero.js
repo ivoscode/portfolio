@@ -24,7 +24,7 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <div className=' w-1/2 hidden md:block  bg-gray-400 '></div>
+      <div className=' w-1/2 hidden md:block bg-pink-300 '></div>
     </div>
   );
 };

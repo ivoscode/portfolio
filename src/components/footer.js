@@ -8,7 +8,7 @@ import ContactForm from './contactForm';
 
 const Footer = () => {
   return (
-    <footer className=' w-full px-3 py-8 mx-auto md:px-11 md:py-5'>
+    <footer id='contact' className=' w-full px-3 py-8 mx-auto md:px-11 md:py-5'>
       <div className='bg-black md:flex md:justify-around w-full rounded-3xl'>
         <ContactForm />
         <ContactDetails />
