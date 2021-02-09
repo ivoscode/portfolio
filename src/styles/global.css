@@ -47,3 +47,61 @@ h1 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.ball {
+  background: #f45342;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 80px auto 0 auto;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-90px);
+  }
+}
+
+.react {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  margin: 80px auto 0 auto;
+  top: -4rem;
+  left: 3rem;
+  animation: bounce 10s;
+}
+.gatsby {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 80px auto 0 auto;
+  animation: bounce 6.8s;
+  opacity: 0.5;
+  position: absolute !important;
+  left: -5rem;
+  top: 16rem;
+}
+.node {
+  width: 100px;
+  margin: 80px auto 0 auto;
+  top: 8rem;
+  left: 24rem;
+  animation: bounce 6.8s;
+}
+.nextjs {
+  width: 200px;
+  border-radius: 50%;
+  margin: 80px auto 0 auto;
+  left: 10rem;
+  top: 14rem;
+  animation: bounce 12s;
+}
+.anim {
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  z-index: -2;
+  position: absolute !important;
+}

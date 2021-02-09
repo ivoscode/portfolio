@@ -1,6 +1,42 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 const Hero = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      react: file(relativePath: { eq: "react-icon.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+
+      gatsby: file(relativePath: { eq: "gatsby-icon.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      node: file(relativePath: { eq: "node-icon.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      nextjs: file(relativePath: { eq: "nextjs-icon.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <div className='md:flex'>
       <div className='md:w-1/2'>
@@ -15,16 +51,38 @@ const Hero = () => {
           Maximize your business potential with performant websites built with
           the latest, innovative technologies.
         </p>
-        <div>
+        <div className='flex sm:flex-col md:flex-row'>
           <button
             className=' mt-10 bg-pink-700 hover:bg-pink-800 text-white font-bold py-2 px-7 rounded-full'
             type='submit'
           >
             Get in touch
           </button>
+          <button
+            className=' mt-10 bg-yellow-600 hover:bg-yellow-800 text-white font-bold py-2 px-7 rounded-full lg:ml-5'
+            type='submit'
+          >
+            <a href='https://github.com/ivoscode/resume/blob/main/Ivo-resume.pdf'>
+              View CV
+            </a>
+          </button>
         </div>
       </div>
-      <div className=' w-1/2 hidden md:block bg-pink-300 '></div>
+      <div className=' w-1/2  relative hidden md:flex'>
+        <Img className='react anim' fluid={data.react.childImageSharp.fluid} />
+        <Img
+          className='gatsby anim'
+          fluid={data.gatsby.childImageSharp.fluid}
+        />
+        <Img
+          className='node anim md:hidden lg:inline-block'
+          fluid={data.node.childImageSharp.fluid}
+        />
+        <Img
+          className='nextjs anim'
+          fluid={data.nextjs.childImageSharp.fluid}
+        />
+      </div>
     </div>
   );
 };
