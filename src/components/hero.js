@@ -44,13 +44,10 @@ const Hero = () => {
         <h1 className=' text-5xl font-bold text-gray-700 md:text-7xl '>
           I build
         </h1>
-        <h1 className='mark  text-5xl font-bold mt-5 md:text-7xl'>
+        <h1 className=' text-5xl font-bold mt-5  text-gray-700 md:text-7xl'>
           fast sites & apps.
         </h1>
-        <p className='mt-8'>
-          Maximize your business potential with performant websites built with
-          the latest, innovative technologies.
-        </p>
+
         <div className='flex sm:flex-col md:flex-row'>
           <button
             className=' mt-10 bg-pink-700 hover:bg-pink-800 text-white font-bold py-2 px-7 rounded-full'
@@ -62,7 +59,7 @@ const Hero = () => {
             className=' mt-10 bg-yellow-600 hover:bg-yellow-800 text-white font-bold py-2 px-7 rounded-full lg:ml-5'
             type='submit'
           >
-            <a href='https://github.com/ivoscode/resume/blob/main/Ivo-resume.pdf'>
+            <a href='https://drive.google.com/file/d/1pw3OKXtWcqLyhJ6LMu2YpDJbRPEAOa-A/view?usp=sharing'>
               View CV
             </a>
           </button>
