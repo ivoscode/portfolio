@@ -6,9 +6,9 @@ import github from '../images/github.svg';
 const Project = () => {
   const data = useStaticQuery(graphql`
     query {
-      project1: file(relativePath: { eq: "project1.jpeg" }) {
+      project1: file(relativePath: { eq: "project1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 200) {
+          fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -16,7 +16,7 @@ const Project = () => {
 
       project2: file(relativePath: { eq: "project2.jpeg" }) {
         childImageSharp {
-          fluid(maxWidth: 200) {
+          fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -28,8 +28,9 @@ const Project = () => {
     {
       title: 'React app',
       image: <Img fluid={data.project1.childImageSharp.fluid} />,
-      text:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+      text: 'React site',
+      code: '',
+      live: 'https://travel-fun.netlify.app/',
     },
 
     {
@@ -42,11 +43,11 @@ const Project = () => {
 
   return (
     <div className='mt-24 mb-24'>
-      <h1 className=' mb-8 text-3xl font-bold text-gray-700 md:text-5xl '>
+      <h1 className=' mb-8 text-3xl font-bold text-gray-700 md:text-3xl md:mt-9 '>
         Latest work
       </h1>
       <div className='md:flex md:justify-between'>
-        {projectData.map(({ title, image, text }) => {
+        {projectData.map(({ title, image, text, code, live }) => {
           return (
             <div
               key={title}
@@ -57,14 +58,15 @@ const Project = () => {
               <p> {text}</p>
               <div className=''>
                 <a
-                  href='https://github.com/ivoscode'
+                  href={live}
+                  target='blank'
                   className=' mt-10 bg-pink-700 hover:bg-pink-800 text-white font-bold py-2 px-7 rounded-full'
                   type='submit'
                 >
                   Visit The Site
                 </a>
 
-                <a href='https://github.com/ivoscode'>
+                <a href={code} target='blank'>
                   <img
                     className=' inline-block mb-1 ml-10 h-10 w-10  hover:bg-gray-300 rounded-3xl '
                     alt='github'

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
 const Hero = () => {
@@ -48,18 +48,21 @@ const Hero = () => {
           fast sites & apps.
         </h1>
 
-        <div className='flex sm:flex-col md:flex-row'>
+        <div className='flex '>
           <button
             className=' mt-10 bg-pink-700 hover:bg-pink-800 text-white font-bold py-2 px-7 rounded-full'
             type='submit'
           >
-            Get in touch
+            <Link to='#contact'> Get in touch</Link>
           </button>
           <button
-            className=' mt-10 bg-yellow-600 hover:bg-yellow-800 text-white font-bold py-2 px-7 rounded-full lg:ml-5'
+            className=' mt-10 bg-yellow-600 hover:bg-yellow-800 text-white font-bold py-2 px-7 rounded-full ml-3 lg:ml-6'
             type='submit'
           >
-            <a href='https://drive.google.com/file/d/1pw3OKXtWcqLyhJ6LMu2YpDJbRPEAOa-A/view?usp=sharing'>
+            <a
+              href='https://drive.google.com/file/d/1pw3OKXtWcqLyhJ6LMu2YpDJbRPEAOa-A/view?usp=sharing'
+              target='blank'
+            >
               View CV
             </a>
           </button>

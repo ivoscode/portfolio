@@ -54,7 +54,7 @@ function Header() {
             },
           ].map((link) => (
             <Link
-              className='block mt-4 text-black no-underline md:inline-block md:mt-0 md:mr-16 text-lg'
+              className='block ml-20 mt-4 text-black no-underline  md:inline-block md:mt-0 md:mr-15 text-xl'
               key={link.title}
               to={link.route}
             >
