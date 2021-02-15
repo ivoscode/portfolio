@@ -14,7 +14,14 @@ const Project = () => {
         }
       }
 
-      project2: file(relativePath: { eq: "project2.jpeg" }) {
+      project2: file(relativePath: { eq: "project2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      project3: file(relativePath: { eq: "project3.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -26,18 +33,26 @@ const Project = () => {
 
   const projectData = [
     {
-      title: 'React app',
+      title: 'Travel Fun',
       image: <Img fluid={data.project1.childImageSharp.fluid} />,
-      text: 'React site',
-      code: '',
+      text: 'React site styled with Tailwind and Slick carousel',
+      code: 'https://github.com/ivoscode/holiday-spots',
       live: 'https://travel-fun.netlify.app/',
     },
 
     {
-      title: 'Reactapp2',
+      title: 'Todo App',
       image: <Img fluid={data.project2.childImageSharp.fluid} />,
-      text:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
+      text: 'Mobile app built with React Native.',
+      code: 'https://github.com/ivoscode/todo-app-react-native',
+      live: 'https://expo.io/@ilegzdins/projects/todoapp',
+    },
+    {
+      title: 'Timer App',
+      image: <Img fluid={data.project3.childImageSharp.fluid} />,
+      text: 'Mobile app built with React Native.',
+      code: 'https://github.com/ivoscode/timer-react-native',
+      live: 'https://expo.io/@ilegzdins/projects/timer',
     },
   ];
 
@@ -53,7 +68,7 @@ const Project = () => {
               key={title}
               className='lg:w-1/3 md:w-1/2 mx-5  p-10 shadow-lg rounded-lg bg-gray-100  '
             >
-              <div className='overflow-hidden  rounded-lg'>{image}</div>{' '}
+              <div className='overflow-hidden md:h-52 rounded-lg'>{image}</div>{' '}
               <h1 className='mt-5 mb-3 text-xl'>{title} </h1>
               <p> {text}</p>
               <div className=''>

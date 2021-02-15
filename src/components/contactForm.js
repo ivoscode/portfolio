@@ -62,7 +62,7 @@ const ContactForm = () => {
                 />
               </div>
               {touched.name && errors.name && (
-                <small className='text-danger'>{errors.name}</small>
+                <small className='text-pink-700'>{errors.name}</small>
               )}
             </div>
 
@@ -77,7 +77,7 @@ const ContactForm = () => {
                 />
               </div>
               {touched.email && errors.email && (
-                <small className='text-danger'>{errors.email}</small>
+                <small className='text-pink-700'>{errors.email}</small>
               )}
             </div>
 
@@ -93,7 +93,7 @@ const ContactForm = () => {
                 />
               </div>
               {touched.message && errors.message && (
-                <small className='text-danger'>{errors.message}</small>
+                <small className='text-pink-700'>{errors.message}</small>
               )}
             </div>
 
@@ -101,7 +101,7 @@ const ContactForm = () => {
               {values.success && (
                 <div>
                   <div>
-                    <h4>
+                    <h4 className='text-white'>
                       Your message has been successfully sent, I will get back
                       to you ASAP!
                     </h4>
