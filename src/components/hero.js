@@ -1,5 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import Img from 'gatsby-image';
 
 const Hero = () => {
@@ -59,12 +60,12 @@ const Hero = () => {
             className=' mt-10 bg-yellow-600 hover:bg-yellow-800 text-white font-bold py-2 px-7 rounded-full ml-3 lg:ml-6'
             type='submit'
           >
-            <a
+            <OutboundLink
               href='https://drive.google.com/file/d/1pw3OKXtWcqLyhJ6LMu2YpDJbRPEAOa-A/view?usp=sharing'
               target='blank'
             >
               View CV
-            </a>
+            </OutboundLink>
           </button>
         </div>
       </div>
