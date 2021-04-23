@@ -48,10 +48,32 @@ const Project = () => {
           }
         }
       }
+      project5: file(relativePath: { eq: "project5.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `);
 
   const projectData = [
+    {
+      title: "Restaurant",
+      image: <Img fluid={data.project4.childImageSharp.fluid} />,
+      text: "Landing page for a restaurant built with Next.js.",
+      code: "https://github.com/ivoscode/restaurant",
+      live: "https://restaurant-snowy.vercel.app/",
+    },
+    {
+      title: "Pizza shop",
+      image: <Img fluid={data.project5.childImageSharp.fluid} />,
+      text:
+        "Landing page for a pizza shop with functioning shopping cart. Built with Next.js implementing react portal and useReducer hook.",
+      code: "https://github.com/ivoscode/pizza-shop/tree/main",
+      live: "https://pizza-shop-4ij3jhrik-ivoscode.vercel.app/",
+    },
     {
       title: "Travel Fun",
       image: <Img fluid={data.project1.childImageSharp.fluid} />,
@@ -73,13 +95,6 @@ const Project = () => {
       text: "Mobile app built with React Native.",
       code: "https://github.com/ivoscode/timer-react-native",
       live: "https://expo.io/@ilegzdins/projects/timer",
-    },
-    {
-      title: "Restaurant",
-      image: <Img fluid={data.project4.childImageSharp.fluid} />,
-      text: "Landing page for a restaurant built with Next.js.",
-      code: "https://github.com/ivoscode/restaurant",
-      live: "https://restaurant-snowy.vercel.app/",
     },
   ];
 
