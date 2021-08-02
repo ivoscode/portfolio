@@ -1,18 +1,14 @@
-
 import Link from "next/link";
 import React, { useState } from "react";
 function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
-  
 
   return (
     <header className=" header-bg z-50 md:pr-56 ">
       <div className="flex flex-wrap items-center justify-between  p-4 mx-auto md:p-8">
         <Link href="/">
           <h1 className=" ml-3 text-black no-underline">
-            <span className="text-xl font-bold tracking-tight">
-              IvosCode
-            </span>
+            <span className="text-xl font-bold tracking-tight">IvosCode</span>
           </h1>
         </Link>
 
@@ -45,12 +41,10 @@ function Header() {
               title: `Contact`,
             },
           ].map((link) => (
-            <Link
-              className="block ml-20 mt-4 text-black no-underline  sm:inline-block sm:mt-0 sm:mr-15 text-xl"
-              key={link.title}
-              href={link.route}
-            >
-              {link.title}
+            <Link key={link.title} href={link.route}>
+              <a className="block ml-20 mt-4 text-black no-underline  sm:inline-block sm:mt-0 sm:mr-10 text-xl">
+                {link.title}
+              </a>
             </Link>
           ))}
         </nav>
