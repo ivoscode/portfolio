@@ -37,6 +37,22 @@ const App = ({ Component, pageProps }) => {
           `,
         }}
       />
+      {/* analytics old style */}
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=UA-179626972-1`}
+      />
+
+      <Script strategy="lazyOnload">
+        {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-179626972-1', {
+        page_path: window.location.pathname,
+      });
+  `}
+      </Script>
       <Component {...pageProps} />
     </>
   );

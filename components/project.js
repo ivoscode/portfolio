@@ -1,8 +1,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Fade from "react-reveal/Fade";
-import project5 from "../public/images/project5.png";
-console.log(project5);
+
 const Project = () => {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -108,8 +107,8 @@ const Project = () => {
             <Fade
               right={isDesktop}
               bottom={isMobile}
-              duration={1000}
-              delay={1000}
+              duration={1500}
+              delay={500}
               distance="30px"
             >
               <div className="overflow-hidden h-full lg:w-7/12">

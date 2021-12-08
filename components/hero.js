@@ -1,10 +1,7 @@
-
-import Image from 'next/image';
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Fade from "react-reveal/Fade";
 const Hero = () => {
- 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -54,7 +51,7 @@ const Hero = () => {
                 type="submit"
               >
                 <Link
-                  href="https://drive.google.com/file/d/1wrrtuqjUJKueLeJXvgUQcdFu0dmImANc/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1DjFo10lPqmUIKc7gnQQCo8Sxr6pc9LLj/view?usp=sharing"
                   target="blank"
                 >
                   View CV
@@ -73,31 +70,19 @@ const Hero = () => {
           distance="30px"
         >
           <div className="h-96 relative  ">
-            <div className="react anim" >
-            <Image 
-              src={'/images/react-icon.png'}
-               width={100}
-      height={80}
-             /></div>
+            <div className="react anim">
+              <img src="/images/react-icon.png" width={100} height={80} />
+            </div>
 
-          <div className="gatsby anim">  <Image
-              
-              src={'/images/gatsby-icon.png'}
-               width={50}
-      height={50}
-            /></div>
-            <div  className="node anim md:hidden lg:inline-block"><Image
-              
-             src={'/images/node-icon.png'}
-              width={80}
-      height={50}
-            /></div>
-           <div  className="nextjs anim"> <Image
-             
-               width={50}
-      height={50}
-              src={'/images/nextjs-icon.png'}
-            /></div>
+            <div className="gatsby anim">
+              <img src="/images/gatsby-icon.png" width={50} height={50} />
+            </div>
+            <div className="node anim md:hidden lg:inline-block">
+              <img src="/images/node-icon.png" width={80} height={50} />
+            </div>
+            <div className="nextjs anim">
+              <img width={80} height={80} src="/images/nextjs-icon.png" />
+            </div>
           </div>
         </Fade>
       </div>

@@ -15,7 +15,6 @@
 }
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap"); */
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -23,7 +22,6 @@
 :root {
   --main-bg-color: #f9fafb; /* gray 50 */
   --main-text-color: #374151; /* gray 700 */
- 
 }
 p {
   font-family: Montserrat, sans-serif;
@@ -95,7 +93,7 @@ h1 {
   width: 100px;
   margin: 80px auto 0 auto;
   top: 8rem;
-  left: 24rem;
+  left: 20rem;
   animation: bounce 14s;
 }
 .nextjs {
